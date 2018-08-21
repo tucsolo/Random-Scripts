@@ -18,7 +18,7 @@ def main(args):
 	oa = []
 	
 	with open('2017.csv', 'rb') as csv2017:
-		data2017 = csv.reader(csv2017, delimiter=',', quotechar=';')
+		data2017 = csv.reader(csv2017, delimiter=';', quotechar=':')
 		for row in data2017:
 			#print row
 			if row[1] == 'P':
@@ -31,7 +31,7 @@ def main(args):
 				a17.append(row)
 
 	with open('2018.csv', 'rb') as csv2018:
-		data2018 = csv.reader(csv2018, delimiter=',', quotechar=';')
+		data2018 = csv.reader(csv2018, delimiter=';', quotechar=':')
 		for row in data2018:
 			#print row
 			if row[1] == 'P':
@@ -69,7 +69,7 @@ def main(args):
 		op.append(g)
 
 	with open('portieri.csv', 'wb') as csvfile:
-		spamwriter = csv.writer(csvfile, delimiter=',', quotechar=';', quoting=csv.QUOTE_MINIMAL)
+		spamwriter = csv.writer(csvfile, delimiter=';', quotechar=':', quoting=csv.QUOTE_MINIMAL)
 		spamwriter.writerow(["Nome", "Squadra", "PG", "MV", "MF", "GS", "RP", "AM", "ES", "2017","PG", "MV", "MF", "GS", "RP", "AM", "ES"])
 		
 		for row in op:
@@ -140,7 +140,7 @@ def main(args):
 		od.append(g)
 
 	with open('difensori.csv', 'wb') as csvfile:
-		spamwriter = csv.writer(csvfile, delimiter=',', quotechar=';', quoting=csv.QUOTE_MINIMAL)
+		spamwriter = csv.writer(csvfile, delimiter=';', quotechar=':', quoting=csv.QUOTE_MINIMAL)
 		spamwriter.writerow(["Nome", "Squadra", "PG", "MV", "MF", "GF", "RC", "R+", "R-", "AS", "AM", "ES", "AU", "2017","PG", "MV", "MF", "GF", "RC", "R+", "R-", "AS", "AM", "ES", "AU"])
 		
 		for row in od:
@@ -210,7 +210,7 @@ def main(args):
 		oc.append(g)
 
 	with open('centrocampisti.csv', 'wb') as csvfile:
-		spamwriter = csv.writer(csvfile, delimiter=',', quotechar=';', quoting=csv.QUOTE_MINIMAL)
+		spamwriter = csv.writer(csvfile, delimiter=';', quotechar=':', quoting=csv.QUOTE_MINIMAL)
 		spamwriter.writerow(["Nome", "Squadra", "PG", "MV", "MF", "GF", "RC", "R+", "R-", "AS", "AM", "ES", "AU", "2017","PG", "MV", "MF", "GF", "RC", "R+", "R-", "AS", "AM", "ES", "AU"])
 		
 		for row in oc:
@@ -281,7 +281,7 @@ def main(args):
 		oa.append(g)
 
 	with open('attaccanti.csv', 'wb') as csvfile:
-		spamwriter = csv.writer(csvfile, delimiter=',', quotechar=';', quoting=csv.QUOTE_MINIMAL)
+		spamwriter = csv.writer(csvfile, delimiter=';', quotechar=':', quoting=csv.QUOTE_MINIMAL)
 		spamwriter.writerow(["Nome", "Squadra", "PG", "MV", "MF", "GF", "RC", "R+", "R-", "AS", "AM", "ES", "AU", "2017","PG", "MV", "MF", "GF", "RC", "R+", "R-", "AS", "AM", "ES", "AU"])
 		
 		for row in oa:
